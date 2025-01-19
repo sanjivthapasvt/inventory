@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="librarystyle.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+    </nav>
+
+    <div class="header">
+      <h1>Library Management System</h1>
+    </div>
+
+    <div id="lowBookAlert" class="alert">
+      Warning: Book count is low! Sending notification to administrators.
+    </div>
+
+    <div class="dashboard">
+      <div class="counter-card">
+        <h2>Total Books</h2>
+        <div id="bookCounter" class="counter-value">0</div>
+        <div class="counter-controls">
+          <button class="button" onclick="addBook()">Add Book</button>
+          <button class="button remove" onclick="removeBook()">
+            Remove Book
+          </button>
+        </div>
+      </div>
+      <div class="counter-card">
+        <h2>Total Members</h2>
+        <div id="memberCounter" class="counter-value">0</div>
+        <div class="counter-controls">
+          <button class="button" onclick="addMember()">Add Member</button>
+          <button class="button remove" onclick="removeMember()">
+            Remove Member
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-card">
+        <h3 class="menu-title">Books Management</h3>
+        <ul class="menu-list">
+          <li class="menu-item">View All Books</li>
+          <li class="menu-item">Borrowed Books</li>
+          <li class="menu-item">Available Books</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <h3 class="menu-title">Members Management</h3>
+        <ul class="menu-list">
+          <li class="menu-item">View All Members</li>
+          <li class="menu-item">Active Members</li>
+          <li class="menu-item">Membership Status</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
