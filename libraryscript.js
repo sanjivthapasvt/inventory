@@ -1,5 +1,5 @@
 let bookCount = 8;
-let memberCount = 5;
+let memberCount = 6;
 
 function addBook() {
   bookCount++;
