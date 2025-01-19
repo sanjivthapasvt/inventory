@@ -1,46 +1,50 @@
+// Get references to DOM elements
 const input = document.getElementById('input');
 const enterButton = document.getElementById('enter');
-const foodList = document.getElementById('food-list');
+const bookList = document.getElementById('book-list');
 
-// Function to create a new food item
-function createFoodItem(foodName) {
-    // Create li element
+// Function to create a new book item
+function createBookItem(bookName) {
+    // Create a new list item element
     const li = document.createElement('li');
-    li.className = 'food-item';
-    li.textContent = foodName;
+    li.className = 'book-item';
+    li.textContent = bookName;
 
-    // Create delete button
+    // Create a delete button
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'delete';
     deleteButton.className = 'delete-btn';
 
-    // Append delete button to li
+    // Append the delete button to the list item
     li.appendChild(deleteButton);
 
-    // Append li to ul
-    foodList.appendChild(li);
+    // Append the list item to the book list
+    bookList.appendChild(li);
 }
 
-//To delete item from list
-foodList.addEventListener('click', (event) => {
+// Event listener to delete a book item
+bookList.addEventListener('click', (event) => {
+    // Check if the clicked element is a delete button
     if (event.target.classList.contains('delete-btn')) {
-        const li = event.target.parentNode; 
-        li.remove(); 
+        const li = event.target.parentNode; // Get the parent list item
+        li.remove(); // Remove the list item
     }
 });
 
-//To enter item on list after clicking enter
+// Event listener to add a new book item when clicking the "Enter" button
 enterButton.addEventListener('click', () => {
-    const foodName = input.value.trim();
-    if (foodName !== '') {
-        createFoodItem(foodName);
-        input.value = '';
+    const bookName = input.value.trim(); // Get the input value and trim whitespace
+    if (bookName !== '') {
+        createBookItem(bookName); // Create and add the new book item
+        input.value = ''; // Clear the input field
+    } else {
+        alert('Please enter a valid book name!'); // Show an alert for invalid input
     }
 });
 
-//To enter item on list after pressing enter in keyboard
+// Event listener to add a new book item when pressing the "Enter" key
 input.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-        enterButton.click();
+        enterButton.click(); // Trigger the click event of the "Enter" button
     }
 });
