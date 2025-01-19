@@ -101,6 +101,11 @@ body {
   background: #e9ecef;
 }
 
+.menu-item a{
+  text-decoration: none;
+  color: black;
+}
+
 .button {
   background: #2575fc;
   color: white;
