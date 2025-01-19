@@ -1,5 +1,5 @@
-let bookCount = 0;
-let memberCount = 0;
+let bookCount = 5;
+let memberCount = 5;
 
 function addBook() {
   bookCount++;
@@ -12,16 +12,15 @@ function removeBook() {
     updateCounters();
 
     if (bookCount === 0) {
-      document.getElementById("lowBookAlert").style.display = "block";
-      fetch("/notify-admin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: "Book count is zero! Please restock.",
-        }),
-      });
+      window.alert("Book count is zero! Please restock.");
+      //
+      fetch("http://127.0.0.1:5000/run-script")
+        .then((response) => response.text())
+        .then((data) => console.log(data))
+        .catch((error) => console.error("Error:", error));
+    } else {
+      console.log("Condition not met, not calling the Python script.");
+      //
     }
   }
 }
