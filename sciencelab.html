@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Science Lab Management System</title>
+    <link rel="stylesheet" href="sciencelab.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Science Lab Management System</h1>
+    </header>
+    <div class="home-button">
+      <a href="index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h3>Chemistry Lab</h3>
+        <form id="chemistryForm">
+          <div class="form-group">
+            <label for="chemistryItemName">Item Name:</label>
+            <input type="text" id="chemistryItemName" required />
+          </div>
+          <div class="form-group">
+            <label for="chemistryItemQuantity">Quantity:</label>
+            <input type="number" id="chemistryItemQuantity" required />
+          </div>
+          <button type="button" onclick="addChemistryItem()">Add Item</button>
+        </form>
+        <h4>Available Items:</h4>
+        <table id="chemistryTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Beakers</td>
+              <td>20</td>
+              <td>
+                <button onclick="removeChemistryItem(this)">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Bunsen Burners</td>
+              <td>15</td>
+              <td>
+                <button onclick="removeChemistryItem(this)">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Test Tubes</td>
+              <td>50</td>
+              <td>
+                <button onclick="removeChemistryItem(this)">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>pH Meters</td>
+              <td>5</td>
+              <td>
+                <button onclick="removeChemistryItem(this)">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Physics Lab</h3>
+        <form id="physicsForm">
+          <div class="form-group">
+            <label for="physicsItemName">Item Name:</label>
+            <input type="text" id="physicsItemName" required />
+          </div>
+          <div class="form-group">
+            <label for="physicsItemQuantity">Quantity:</label>
+            <input type="number" id="physicsItemQuantity" required />
+          </div>
+          <button type="button" onclick="addPhysicsItem()">Add Item</button>
+        </form>
+        <h4>Available Items:</h4>
+        <table id="physicsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Voltmeter</td>
+              <td>10</td>
+              <td><button onclick="removePhysicsItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Prisms</td>
+              <td>8</td>
+              <td><button onclick="removePhysicsItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Ammeter</td>
+              <td>12</td>
+              <td><button onclick="removePhysicsItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Lens Sets</td>
+              <td>6</td>
+              <td><button onclick="removePhysicsItem(this)">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Biology Lab</h3>
+        <form id="biologyForm">
+          <div class="form-group">
+            <label for="biologyItemName">Item Name:</label>
+            <input type="text" id="biologyItemName" required />
+          </div>
+          <div class="form-group">
+            <label for="biologyItemQuantity">Quantity:</label>
+            <input type="number" id="biologyItemQuantity" required />
+          </div>
+          <button type="button" onclick="addBiologyItem()">Add Item</button>
+        </form>
+        <h4>Available Items:</h4>
+        <table id="biologyTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Microscopes</td>
+              <td>10</td>
+              <td><button onclick="removeBiologyItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Petri Dishes</td>
+              <td>25</td>
+              <td><button onclick="removeBiologyItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Dissection Kits</td>
+              <td>15</td>
+              <td><button onclick="removeBiologyItem(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Slides</td>
+              <td>40</td>
+              <td><button onclick="removeBiologyItem(this)">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="sciencelab.js"></script>
+  </body>
+</html>

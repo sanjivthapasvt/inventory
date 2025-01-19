@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Computer Management System</title>
+    <link rel="stylesheet" href="globalstyle.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+    </nav>
+
+    <div class="header">
+      <h1>Computer Management System</h1>
+    </div>
+
+    <div id="lowBookAlert" class="alert"></div>
+
+    <div class="dashboard">
+      <div class="counter-card">
+        <h2>Total computer item stock</h2>
+        <div id="bookCounter" class="counter-value">5</div>
+        <div class="counter-controls">
+          <button class="button" onclick="addBook()">Add Item</button>
+          <button class="button remove" onclick="removeBook()">Remove Item</button>
+        </div>
+      </div>
+      <div class="counter-card">
+        <h2>Total student</h2>
+        <div id="memberCounter" class="counter-value">5</div>
+        <div class="counter-controls">
+          <button class="button" onclick="addMember()">Add Student</button>
+          <button class="button remove" onclick="removeMember()">Remove Student</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-card">
+        <h3 class="menu-title">Computer Management</h3>
+        <ul class="menu-list">
+          <li class="menu-item">View All Computer item</li>
+          <li class="menu-item">Used items</li>
+          <li class="menu-item">Available item of computer</li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <h3 class="menu-title">Student Management</h3>
+        <ul class="menu-list">
+          <li class="menu-item">View All Student</li>
+          <li class="menu-item">Active Student</li>
+          <li class="menu-item">Student Status</li>
+        </ul>
+      </div>
+    </div>
+    <script src="computerlab.js"></script>
+  </body>
+</html>

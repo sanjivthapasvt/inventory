@@ -114,3 +114,9 @@ header {
   text-decoration: none;
   color: #2c3e50;
 }
+
+.container img{
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+}
