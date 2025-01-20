@@ -77,3 +77,12 @@ input::placeholder{
         display: none;
     }
 }
+
+.home-button a{
+    text-decoration: none;
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
