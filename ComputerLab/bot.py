@@ -1,11 +1,11 @@
 from flask import Flask
 import requests
-
+import os
 app = Flask(__name__)
 
 @app.route('/run-script', methods=['GET'])
 def run_script():
-    BOT_TOKEN = "7623612943:AAFNAt2Tnsx7_kIs8ipw_Thj4WYkzFLrLD8"
+    BOT_TOKEN = os.getenv('API_KEY')
     CHAT_ID = "1008529157"
     MESSAGE = "Your Lab item is low. Please restock"
 
