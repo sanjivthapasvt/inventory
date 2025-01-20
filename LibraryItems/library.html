@@ -2,78 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Management System</title>
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="../globalstyle.css" />
   </head>
   <body>
-    <nav class="nav">
-      <a href="../index.html">Home</a>
-    </nav>
+    <div class="content-wrapper">
+      <div class="main-content">
+        <div class="header">
+          <h1>Library Management System</h1>
+        </div>
 
-    <div class="header">
-      <h1>Library Management System</h1>
-    </div>
+        <div id="lowBookAlert" class="alert">
+          Warning: Book count is low! Sending notification to administrators.
+        </div>
 
-    <div id="lowBookAlert" class="alert">
-      Warning: Book count is low! Sending notification to administrators.
-    </div>
+        <div class="dashboard">
+          <div class="counter-card">
+            <h2>Total Books</h2>
+            <div id="bookCounter" class="counter-value">8</div>
+            <div class="counter-controls">
+              <button class="button" onclick="addBook()">Add Book</button>
+              <button class="button remove" onclick="removeBook()">
+                Remove Book
+              </button>
+            </div>
+          </div>
 
-    <div class="dashboard">
-      <div class="counter-card">
-        <h2>Total Books</h2>
-        <div id="bookCounter" class="counter-value">8</div>
-        <div class="counter-controls">
-          <button class="button" onclick="addBook()">Add Book</button>
-          <button class="button remove" onclick="removeBook()">
-            Remove Book
-          </button>
+          <div class="counter-card">
+            <h2>Total Members</h2>
+            <div id="memberCounter" class="counter-value">6</div>
+            <div class="counter-controls">
+              <button class="button" onclick="addMember()">Add Member</button>
+              <button class="button remove" onclick="removeMember()">
+                Remove Member
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="menu-card">
+            <h3 class="menu-title">Books Management</h3>
+            <ul class="menu-list">
+              <li class="menu-item">View All Books</li>
+              <li class="menu-item">Borrowed Books</li>
+              <li class="menu-item">Available Books</li>
+            </ul>
+          </div>
+
+          <div class="menu-card">
+            <h3 class="menu-title">Members Management</h3>
+            <ul class="menu-list">
+              <li class="menu-item">View All Members</li>
+              <li class="menu-item">Active Members</li>
+              <li class="menu-item">Membership Status</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="counter-card">
-        <h2>Total Members</h2>
-        <div id="memberCounter" class="counter-value">6</div>
-        <div class="counter-controls">
-          <button class="button" onclick="addMember()">Add Member</button>
-          <button class="button remove" onclick="removeMember()">
-            Remove Member
-          </button>
+
+      <div class="canvas-container">
+        <div class="counter-card">
+          <h2>Books Statistics</h2>
+          <div id="bookCounter" class="counter-value"></div>
+          <canvas id="bookChart" width="400" height="200"></canvas>
+          <div class="counter-controls">
+            <button class="button" onclick="addBook()">Add Book</button>
+            <button class="button remove" onclick="removeBook()">
+              Remove Book
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="menu-section">
-      <div class="menu-card">
-        <h3 class="menu-title">Books Management</h3>
-        <ul class="menu-list">
-          <a href="books.html"><li class="menu-item">View All Books</a></li>
-          <a href="rentedbook.html"><li class="menu-item">Borrowed Books</a></li>
-          <a href="availablebook.html"><li class="menu-item">Available Books</a></li>
-        </ul>
-      </div>
-
-      <div class="menu-card">
-        <h3 class="menu-title">Members Management</h3>
-        <ul class="menu-list">
-          <a href="members.html"><li class="menu-item">View All Members</a></li>
-          <li class="menu-item">Active Members</li>
-          <li class="menu-item">Membership Status</li>
-        </ul>
-      </div>
-      <div class="counter-card">
-        <h2>Total Books</h2>
-        <div id="bookCounter" class="counter-value"></div>
-        <canvas id="bookChart" width="400" height="200"></canvas>
-        <div class="counter-controls">
-          <button class="button" onclick="addBook()">Add Book</button>
-          <button class="button remove" onclick="removeBook()">
-            Remove Book
-          </button>
-        </div>
-      </div>      
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </div>
     <script src="libraryscript.js"></script>
   </body>
 </html>
