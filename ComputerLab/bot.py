@@ -25,6 +25,6 @@ def run_script():
     return "Python script executed successfully!"
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(port=8000)
 
 
