@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+  </head>
+  <body>
     <div class="home-button">
-        <a href="index.html">Home</a>
-      </div>
+      <a href="index.html">Home</a>
+    </div>
     <div class="contactcontainer">
-        <form class="mid"  action="https://api.web3forms.com/submit" method="POST">
+      <form class="mid" action="https://api.web3forms.com/submit" method="POST">
         <div class="title">
           <h2>Message to Hacktastic!</h2>
-                <hr>
-            </div>
-            <input type="hidden" name="access_key" value="db923985-dc38-48a0-857d-837f2fa733d1">
-                <input type="text" name="name" placeholder="Your Name" class="input" required>
-                <input type="text" name="email" id="email" placeholder="Your email" class="input" required>
-                <textarea name="message" id="textarea" cols="30" rows="10 " placeholder="Your Message" class="input" required></textarea>
-                <button type="submit" class="button"> Submit</button>
-            </form>
-            <div>
-                <img class="image" src="right_img.jpg" alt="image">
-            </div>
+          <hr />
+        </div>
+        <input
+          type="hidden"
+          name="access_key"
+          value="db923985-dc38-48a0-857d-837f2fa733d1"
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          class="input"
+          required
+        />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Your email"
+          class="input"
+          required
+        />
+        <textarea
+          name="message"
+          id="textarea"
+          cols="30"
+          rows="10 "
+          placeholder="Your Message"
+          class="input"
+          required
+        ></textarea>
+        <button type="submit" class="button">Submit</button>
+      </form>
+      <div>
+        <img class="image" src="right_img.jpg" alt="image" />
+      </div>
     </div>
-</body>
+  </body>
 </html>

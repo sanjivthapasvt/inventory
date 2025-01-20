@@ -3,124 +3,130 @@ let physicsId = 4;
 let biologyId = 4;
 
 function addChemistryItem() {
-    const name = document.getElementById('chemistryItemName').value;
-    const quantity = document.getElementById('chemistryItemQuantity').value;
+  const name = document.getElementById("chemistryItemName").value;
+  const quantity = document.getElementById("chemistryItemQuantity").value;
 
-    if (name && quantity) {
-        chemistryId++;
-        const table = document.getElementById('chemistryTable').getElementsByTagName('tbody')[0];
-        const newRow = table.insertRow(table.rows.length);
+  if (name && quantity) {
+    chemistryId++;
+    const table = document
+      .getElementById("chemistryTable")
+      .getElementsByTagName("tbody")[0];
+    const newRow = table.insertRow(table.rows.length);
 
-        newRow.insertCell(0).textContent = chemistryId;
-        newRow.insertCell(1).textContent = name;
-        newRow.insertCell(2).textContent = quantity;
+    newRow.insertCell(0).textContent = chemistryId;
+    newRow.insertCell(1).textContent = name;
+    newRow.insertCell(2).textContent = quantity;
 
-        // Add remove button to the row
-        const removeCell = newRow.insertCell(3);
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = function() { removeChemistryItem(removeButton); };
-        removeCell.appendChild(removeButton);
+    const removeCell = newRow.insertCell(3);
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function () {
+      removeChemistryItem(removeButton);
+    };
+    removeCell.appendChild(removeButton);
 
-        // Clear input fields
-        document.getElementById('chemistryItemName').value = '';
-        document.getElementById('chemistryItemQuantity').value = '';
-    } else {
-        alert("Please fill in both fields.");
-    }
+    document.getElementById("chemistryItemName").value = "";
+    document.getElementById("chemistryItemQuantity").value = "";
+  } else {
+    alert("Please fill in both fields.");
+  }
 }
 
 function removeChemistryItem(button) {
-    const row = button.closest('tr');
-    const quantityCell = row.cells[2];
-    let quantity = parseInt(quantityCell.textContent);
+  const row = button.closest("tr");
+  const quantityCell = row.cells[2];
+  let quantity = parseInt(quantityCell.textContent);
 
-    if (quantity > 0) {
-        quantity--;
-        quantityCell.textContent = quantity;
-    } else {
-        alert("Quantity can't be less than 0.");
-    }
+  if (quantity > 0) {
+    quantity--;
+    quantityCell.textContent = quantity;
+  } else {
+    alert("Quantity can't be less than 0.");
+  }
 }
 
 function addPhysicsItem() {
-    const name = document.getElementById('physicsItemName').value;
-    const quantity = document.getElementById('physicsItemQuantity').value;
+  const name = document.getElementById("physicsItemName").value;
+  const quantity = document.getElementById("physicsItemQuantity").value;
 
-    if (name && quantity) {
-        physicsId++;
-        const table = document.getElementById('physicsTable').getElementsByTagName('tbody')[0];
-        const newRow = table.insertRow(table.rows.length);
+  if (name && quantity) {
+    physicsId++;
+    const table = document
+      .getElementById("physicsTable")
+      .getElementsByTagName("tbody")[0];
+    const newRow = table.insertRow(table.rows.length);
 
-        newRow.insertCell(0).textContent = physicsId;
-        newRow.insertCell(1).textContent = name;
-        newRow.insertCell(2).textContent = quantity;
+    newRow.insertCell(0).textContent = physicsId;
+    newRow.insertCell(1).textContent = name;
+    newRow.insertCell(2).textContent = quantity;
 
-        // Add remove button to the row
-        const removeCell = newRow.insertCell(3);
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = function() { removePhysicsItem(removeButton); };
-        removeCell.appendChild(removeButton);
+    const removeCell = newRow.insertCell(3);
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function () {
+      removePhysicsItem(removeButton);
+    };
+    removeCell.appendChild(removeButton);
 
-        // Clear input fields
-        document.getElementById('physicsItemName').value = '';
-        document.getElementById('physicsItemQuantity').value = '';
-    } else {
-        alert("Please fill in both fields.");
-    }
+    document.getElementById("physicsItemName").value = "";
+    document.getElementById("physicsItemQuantity").value = "";
+  } else {
+    alert("Please fill in both fields.");
+  }
 }
 
 function removePhysicsItem(button) {
-    const row = button.closest('tr');
-    const quantityCell = row.cells[2];
-    let quantity = parseInt(quantityCell.textContent);
+  const row = button.closest("tr");
+  const quantityCell = row.cells[2];
+  let quantity = parseInt(quantityCell.textContent);
 
-    if (quantity > 0) {
-        quantity--;
-        quantityCell.textContent = quantity;
-    } else {
-        alert("Quantity can't be less than 0.");
-    }
+  if (quantity > 0) {
+    quantity--;
+    quantityCell.textContent = quantity;
+  } else {
+    alert("Quantity can't be less than 0.");
+  }
 }
 
 function addBiologyItem() {
-    const name = document.getElementById('biologyItemName').value;
-    const quantity = document.getElementById('biologyItemQuantity').value;
+  const name = document.getElementById("biologyItemName").value;
+  const quantity = document.getElementById("biologyItemQuantity").value;
 
-    if (name && quantity) {
-        biologyId++;
-        const table = document.getElementById('biologyTable').getElementsByTagName('tbody')[0];
-        const newRow = table.insertRow(table.rows.length);
+  if (name && quantity) {
+    biologyId++;
+    const table = document
+      .getElementById("biologyTable")
+      .getElementsByTagName("tbody")[0];
+    const newRow = table.insertRow(table.rows.length);
 
-        newRow.insertCell(0).textContent = biologyId;
-        newRow.insertCell(1).textContent = name;
-        newRow.insertCell(2).textContent = quantity;
+    newRow.insertCell(0).textContent = biologyId;
+    newRow.insertCell(1).textContent = name;
+    newRow.insertCell(2).textContent = quantity;
 
-        // Add remove button to the row
-        const removeCell = newRow.insertCell(3);
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = function() { removeBiologyItem(removeButton); };
-        removeCell.appendChild(removeButton);
+    const removeCell = newRow.insertCell(3);
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function () {
+      removeBiologyItem(removeButton);
+    };
+    removeCell.appendChild(removeButton);
 
-        // Clear input fields
-        document.getElementById('biologyItemName').value = '';
-        document.getElementById('biologyItemQuantity').value = '';
-    } else {
-        alert("Please fill in both fields.");
-    }
+    document.getElementById("biologyItemName").value = "";
+    document.getElementById("biologyItemQuantity").value = "";
+  } else {
+    alert("Please fill in both fields.");
+  }
 }
 
 function removeBiologyItem(button) {
-    const row = button.closest('tr');
-    const quantityCell = row.cells[2];
-    let quantity = parseInt(quantityCell.textContent);
+  const row = button.closest("tr");
+  const quantityCell = row.cells[2];
+  let quantity = parseInt(quantityCell.textContent);
 
-    if (quantity > 0) {
-        quantity--;
-        quantityCell.textContent = quantity;
-    } else {
-        alert("Quantity can't be less than 0.");
-    }
+  if (quantity > 0) {
+    quantity--;
+    quantityCell.textContent = quantity;
+  } else {
+    alert("Quantity can't be less than 0.");
+  }
 }

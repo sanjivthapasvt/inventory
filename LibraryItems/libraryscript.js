@@ -81,7 +81,6 @@ let bookChart = new Chart(ctx, {
   },
 });
 
-
 function updateChart() {
   bookChart.data.datasets[0].data[0] = bookCount;
   bookChart.update();

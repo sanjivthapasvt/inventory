@@ -13,14 +13,12 @@ function removeBook() {
 
     if (bookCount === 1) {
       window.alert("Items count is low! Please restock!!");
-      //
       fetch("http://127.0.0.1:5000/run-script")
         .then((response) => response.text())
         .then((data) => console.log(data))
         .catch((error) => console.error("Error:", error));
     } else {
       console.log("Condition not met, not calling the Python script.");
-      //
     }
   }
 }
