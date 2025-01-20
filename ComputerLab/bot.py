@@ -7,7 +7,7 @@ app = Flask(__name__)
 def run_script():
     BOT_TOKEN = "7623612943:AAFNAt2Tnsx7_kIs8ipw_Thj4WYkzFLrLD8"
     CHAT_ID = "1008529157"
-    MESSAGE = "Your items are low. Please restock."
+    MESSAGE = "Your Lab item is low. Please restock"
 
     def send_telegram_message(token, chat_id, message):
         url = f"https://api.telegram.org/bot{token}/sendMessage"
@@ -26,3 +26,5 @@ def run_script():
 
 if __name__ == '__main__':
     app.run(port=5000)
+
+

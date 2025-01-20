@@ -11,8 +11,8 @@ function removeBook() {
     bookCount--;
     updateCounters();
 
-    if (bookCount === 0) {
-      window.alert("Book count is zero! Please restock.");
+    if (bookCount === 1) {
+      window.alert("Items count is low! Please restock!!");
       //
       fetch("http://127.0.0.1:5000/run-script")
         .then((response) => response.text())

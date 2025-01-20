@@ -101,7 +101,7 @@ body {
   background: #e9ecef;
 }
 
-.menu-item a{
+.menu-item a {
   text-decoration: none;
   color: black;
 }
@@ -136,4 +136,9 @@ body {
   border-radius: 5px;
   margin: 10px 0;
   display: none;
+}
+
+canvas {
+  margin: 20px auto;
+  display: block;
 }

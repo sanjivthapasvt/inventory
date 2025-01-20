@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+body{
+    background: linear-gradient(to right, #ffdad5, #fff7f9); /* Adjust colors as needed */
+}
+.contactcontainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.mid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; 
+}
+.title h2{ 
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: #a363aa;
+}
+.title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a363aa;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.input{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    padding-left: 25px;
+    color: #666;
+    border-radius: 50px;
+}
+#textarea{
+    height: 240px;
+    padding-top: 15px;
+    border-radius: 20px;
+   
+}
+.input:focus{ 
+    border: 2px solid #ff994f; 
+}
+input::placeholder{
+    color: #a9a9a9;
+}
+.button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background:linear-gradient(270deg,#ff994f,#fa6d86)
+}
+.image{
+    width: 500px;
+}
+@media (max-width:800px){
+    .input{
+        width: 80vw;
+    }
+    .image{
+        display: none;
+    }
+}
