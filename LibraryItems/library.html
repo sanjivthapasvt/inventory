@@ -47,8 +47,8 @@
         <h3 class="menu-title">Books Management</h3>
         <ul class="menu-list">
           <a href="books.html"><li class="menu-item">View All Books</a></li>
-          <li class="menu-item">Borrowed Books</li>
-          <li class="menu-item">Available Books</li>
+          <a href="rentedbook.html"><li class="menu-item">Borrowed Books</a></li>
+          <a href="availablebook.html"><li class="menu-item">Available Books</a></li>
         </ul>
       </div>
 
@@ -62,7 +62,7 @@
       </div>
       <div class="counter-card">
         <h2>Total Books</h2>
-        <div id="bookCounter" class="counter-value"></div>
+        <div id="bookCounter" class="counter-value">5</div>
         <canvas id="bookChart" width="400" height="200"></canvas>
         <div class="counter-controls">
           <button class="button" onclick="addBook()">Add Book</button>
